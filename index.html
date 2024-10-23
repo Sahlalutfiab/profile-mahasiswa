@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profil Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function switchLayout(layout) {
+            document.body.className = layout; // Mengganti class di body untuk layout
+            // Reset content to biodata when switching layouts
+            showContent('biodata');
+        }
+
+        function showContent(content) {
+            document.getElementById('section-content').innerHTML = document.getElementById(content).innerHTML;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <img src="sahla.jpeg" alt="Foto Profil" class="profile-pic">
+        </div>
+        <div class="profile-info">
+            <h1>Profil Mahasiswa</h1> 
+        </div>
+        
+    </header>
+<div class="container">
+    <div class="container-top">
+    <nav>
+        <ul>
+            <li><a href="#" id="biodata">Biodata</a></li>
+            <li><a href="#" id="pendidikan">Pendidikan</a></li>
+            <li><a href="#" id="pengalaman">Pengalaman</a></li>
+            <li><a href="#" id="keahlian">Keahlian</a></li>
+            <li><a href="#" id="publikasi">Publikasi</a></li>
+        </ul>
+    </nav>
+    
+    <section id="content">
+        <!-- Tambahkan gambar di sebelah kiri -->
+            <ul>
+                <h2>Biodata</h2>
+                <p>NIM: 2023081057</p>
+                <p>Nama: Sahla Lutfiah Bilqis</p>
+                <p>Agama : Islam</p>
+                <p>Tanggal Lahir: 25 Mei 2005</p>
+                <p>Tempat Lahir: Sukabumi</p>
+            </ul>
+    </section>
+    </div>
+    <aside>
+        <ul>
+            <h2>Hobi</h2>
+            <li>Menulis</li>
+            <li>Membaca</li>
+            <li>Traveling</li>
+        </ul>
+    </aside>
+</div>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="social-media">
+            <p>Twitter: sahlalutfiab  </p>
+             <p>FB: sahlalutfiab</p> 
+            <p>Instagram: sahlaltf</p>
+          </div>
+          <p class="copy">&copy; Copyright 2024. All Rights Reserved.</p>
+        <div class="slogan">
+        <p>NAMA WEB |</p>
+        <p> Profile Mahasiswa</p>
+
+    </div>
+    </footer>
+    
+
+
+    <!-- JavaScript langsung di dalam file HTML -->
+    <script>
+        // JavaScript untuk manipulasi DOM berdasarkan navigasi
+        document.getElementById('biodata').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+               <ul>
+                <h2>Biodata</h2>
+                <p>NIM: 2023081057</p>
+                <p>Nama: Sahla Lutfiah Bilqis</p>
+                <p>Agama : Islam</p>
+                <p>Tanggal Lahir: 25 Mei 2005</p>
+                <p>Tempat Lahir: Sukabumi</p>
+            </ul>   
+            `;
+        });
+
+        document.getElementById('pendidikan').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+            <ul>
+                <h2>Pendidikan</h2>
+                <p>SD: SDN 1 cisaat</p>
+                <p>SMP: SMPN 1 Cisaat</p>
+                <p>SMA: SMAN 1 Sukabumi</p>
+                <p>Universitas: Pembangunan Jaya University</p>
+            </ul>
+            `;
+        });
+
+        document.getElementById('pengalaman').addEventListener('click', function () {
+            document.getElementById('content').innerHTML = `
+                <h2>Pengalaman</h2>
+                <ul>
+                    <li>
+                        <strong>Magang Mahasiswa Administrasi Persiapan dan Sidang Proposal</strong> | Februari 2024<br>
+                        Mengelola Administrasi Persiapan dan Sidang Proposal Semester Genap Program Studi Sistem Informasi.
+                    </li>
+                    <li>
+                        <strong>Panitia GIDHUB Sistem Informasi</strong> | Mei 2024<br>
+                        Anggota Divisi Konsumsi pada rangkaian acara GIDHUB 2024 yang diselenggarakan oleh Program Studi Sistem Informasi Universitas Pembangunan Jaya.
+                    </li>
+                    <li>
+                        <strong>Panitia Prodi Gathering Sistem Informasi</strong> | Agustus 2024<br>
+                        Anggota Divisi Konsumsi pada rangkaian acara Prodi Gathering 2024 yang diselenggarakan oleh Program Studi Sistem Informasi Universitas Pembangunan Jaya.
+                    </li>
+                </ul>
+            `;
+        });
+
+
+        document.getElementById('keahlian').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+                <h2>Keahlian</h2>
+                <ul>
+                    <li>Pengembangan Web</li>
+                    <li>Manajemen Basis Data</li>
+                    <li>Pengolahan Data</li>
+                    <li>Analisis Sistem</li>
+                </ul>
+            `;
+        });
+
+        document.getElementById('publikasi').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+                <h2>Publikasi</h2>
+                <p>Judul: "Implementasi Sistem Informasi di Dunia Bisnis"</p>
+                <p>Diterbitkan di: Jurnal Teknologi Informasi, 2023</p>
+            `;
+        });
+    </script>
+</body> 
+</html>
